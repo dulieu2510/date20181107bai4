@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ListView lv1 = (ListView) findViewById(R.id.xlv1);
-        ArrayList<String> arr = new ArrayList<String>();
-        arr.add("list1");
-        arr.add("list2");
-        arr.add("list3");
-        ArrayAdapter art = new ArrayAdapter(MainActivity.this,android.R.layout.simple_list_item_1,arr);
+        ArrayList<sinhvien> arr = new ArrayList<sinhvien>();
+        arr.add(new sinhvien("giap","vo trong giap"));
+        arr.add(new sinhvien("giap2","vo trong giap"));
+        arr.add(new sinhvien("giap3","vo trong giap"));
+        ListAdaptervt art = new ListAdaptervt(MainActivity.this,R.layout.layout,arr);
         lv1.setAdapter(art);
     }
 }
